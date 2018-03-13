@@ -2,16 +2,47 @@
 
 {% block header %}
 	<header class="main-header hero is-large">
+<nav class="navbar is-transparent">
+	<div class="navbar-brand">
+		<div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+
+	<div id="navbarExampleTransparentExample" class="navbar-menu">
+		<div class="navbar-end">
+			<a class="navbar-item" href="/papers">
+				Projects
+			</a>
+			<a class="navbar-item" href="/blog">
+				Blog
+			</a>
+			<a class="navbar-item" href="#contacts">
+				Contacts
+			</a>
+
+		</div>
+	</div>
+</nav>
 		<div class="hero-body">
 			<div class="container">
-				<h1 class="title">
-					{{ SITENAME }}
-				</h1>
-				{% if SITESUBTITLE %}
-				<h2 class="subtitle">
-					{{ SITESUBTITLE }}
-				</h2>
-				{% endif %}
+				<div class="columns">
+					<div class="column is-two-fifths-desktop">
+						<div class="my-bio card">
+							<div class="card-content">
+								<h1 class="title is-spaced">
+									{{ SITENAME }}
+								</h1>
+								<h2 class="subtitle">
+									Social researcher, data analyst and web-developer from Saint Petersburg. Research assistant and PhD student at HSE. <a href="/pdfs/cv.pdf" target="_blank">Download CV</a>.
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</header>
@@ -20,34 +51,22 @@
 {% block content %}
 	
 <!-- 	{% include "partials/loop.html" %} -->
-<div class="main-content">
-<div class="tile is-ancestor">
-	<div class="tile is-vertical is-parent is-7">
-		<div class="tile is-child notification">
+<section class="section main-content">
+	<div class="columns">
+		<div class="column is-three-fifths">
 			<p class="title is-5">Research papers</p>
 			<div class="content">
 			{% include "partials/papers.html" %}
 			</div>
 		</div>
-		<div class="tile is-child notification">
-			<p class="title is-5">Research papers</p>
+		<div class="column">
+			<p class="title is-5">Education</p>
 			<div class="content">
-			{% include "partials/papers.html" %}
+				{% include "partials/education.html" %}
 			</div>
 		</div>
 	</div>
-
-	<div class="tile is-parent">
-		<article class="tile is-child notification">
-			<div class="content">
-				<p class="title is-5">Education</p>
-				<div class="content">
-					{% include "partials/education.html" %}
-				</div>
-			</div>
-		</article>
-	</div>
-</div>
+</section>
 <!-- 	{% include "partials/conferences.html" %}
 	{% include "partials/schools.html" %}
 	{% include "partials/teaching.html" %}

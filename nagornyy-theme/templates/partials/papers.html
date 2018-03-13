@@ -1,5 +1,6 @@
 <ul class="papers-list">
- {% for article in articles if "Papers" == article.category %}
-     <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.authors|join(', ') }}. {{ article.title }}</a></li>
+ {% for article in articles|sort(attribute='date', reverse=True) if "Papers" == article.category %}
+ 	<div class="year-div">{{ article.date.strftime('%Y') if (loop.previtem and (loop.previtem.date != article.date)) or loop.first}}</div>
+     <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.authors|join(', ') }}. {{ article.title }}.</a></li>
  {% endfor %}
 </ul>
