@@ -37,11 +37,13 @@ DEFAULT_PAGINATION = 50
 
 MARKUP = ('md', )
 
-THEME = "pelican-themes/nagornyy-theme"
+THEME = "nagornyy-theme"
 PLUGIN_PATHS = ["./pelican-plugins"]
 PLUGINS = ['assets']
 
-ARTICLE_URL = 'posts/{slug}/'
-ARTICLE_SAVE_AS = 'posts/{slug}/index.html'
-PAGE_URL = 'pages/{slug}/'
-PAGE_SAVE_AS = 'pages/{slug}/index.html'
+ARTICLE_URL = '{category}/{slug}/'
+ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
+# PAGE_URL = 'pages/{slug}/'
+# PAGE_SAVE_AS = 'pages/{slug}/index.html'
+
+STATIC_PATHS = ['images', 'pdfs']

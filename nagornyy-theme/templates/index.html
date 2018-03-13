@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block header %}
+	<header class="main-header hero is-large">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title">
+					{{ SITENAME }}
+				</h1>
+				{% if SITESUBTITLE %}
+				<h2 class="subtitle">
+					{{ SITESUBTITLE }}
+				</h2>
+				{% endif %}
+			</div>
+		</div>
+	</header>
+{% endblock header %}
+
+{% block content %}
+	
+<!-- 	{% include "partials/loop.html" %} -->
+<div class="main-content">
+<div class="tile is-ancestor">
+	<div class="tile is-vertical is-parent is-7">
+		<div class="tile is-child notification">
+			<p class="title is-5">Research papers</p>
+			<div class="content">
+			{% include "partials/papers.html" %}
+			</div>
+		</div>
+		<div class="tile is-child notification">
+			<p class="title is-5">Research papers</p>
+			<div class="content">
+			{% include "partials/papers.html" %}
+			</div>
+		</div>
+	</div>
+
+	<div class="tile is-parent">
+		<article class="tile is-child notification">
+			<div class="content">
+				<p class="title is-5">Education</p>
+				<div class="content">
+					{% include "partials/education.html" %}
+				</div>
+			</div>
+		</article>
+	</div>
+</div>
+<!-- 	{% include "partials/conferences.html" %}
+	{% include "partials/schools.html" %}
+	{% include "partials/teaching.html" %}
+	{% include "partials/projects.html" %}
+	{% include "partials/awards.html" %} -->
+</div>
+{% endblock content %}
