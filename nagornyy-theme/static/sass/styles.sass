@@ -15,8 +15,8 @@ $body-size: 18px
 		margin-bottom: 0.7rem
 
 
-.hero.is-large .hero-body
-	padding-top: 6rem
+// .hero.is-large .hero-body
+// 	padding-top: 6rem
 
 .year-div
 	font-weight: 600
@@ -25,3 +25,20 @@ $body-size: 18px
 @media only screen and (max-width: 1200px)
 	.main-header
 		background-position: center
+
+.content a, .card a
+	&:link
+		border-bottom: 1px solid rgba(0,137,255,.3)
+		transition: color .3s ease,border-color .3s ease
+
+	&:visited
+		color: #b40eb4
+		border-color: rgba(180,14,180,.3)
+
+	&:hover
+		color: #f41224
+		border-color: rgba(244,18,36,.3)
+
+.my-bio
+	background-color: rgba(255, 255, 255, 0.85)
+	box-shadow: 0 2px 3px rgba(10, 10, 10, 0.05), 0 0 0 1px rgba(10,10,10,0.05)

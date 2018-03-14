@@ -1,42 +1,41 @@
 {% extends "base.html" %}
 
 {% block header %}
-	<header class="main-header hero is-large">
-<nav class="navbar is-transparent">
-	<div class="navbar-brand">
-		<div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-	</div>
+	<header class="main-header hero is-medium">
+		<nav class="navbar is-transparent">
+			<div class="navbar-brand">
+				<div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
 
-	<div id="navbarExampleTransparentExample" class="navbar-menu">
-		<div class="navbar-end">
-			<a class="navbar-item" href="/papers">
-				Projects
-			</a>
-			<a class="navbar-item" href="/blog">
-				Blog
-			</a>
-			<a class="navbar-item" href="#contacts">
-				Contacts
-			</a>
-
-		</div>
-	</div>
-</nav>
+			<div id="navbarExampleTransparentExample" class="navbar-menu">
+				<div class="navbar-end">
+					<a class="navbar-item" href="/papers">
+						Projects
+					</a>
+					<a class="navbar-item" href="/blog">
+						Blog
+					</a>
+					<a class="navbar-item" href="#contacts">
+						Contacts
+					</a>
+				</div>
+			</div>
+		</nav>
 		<div class="hero-body">
 			<div class="container">
 				<div class="columns">
 					<div class="column is-two-fifths-desktop">
 						<div class="my-bio card">
 							<div class="card-content">
-								<h1 class="title is-spaced">
+<!-- 								<h1 class="title is-spaced">
 									{{ SITENAME }}
-								</h1>
+								</h1> -->
 								<h2 class="subtitle">
-									Social researcher, data analyst and web-developer from Saint Petersburg. Research assistant and PhD student at HSE. <a href="/pdfs/cv.pdf" target="_blank">Download CV</a>.
+									Hi! I am Oleg Nagornyy — Social researcher, Data analyst and Web-developer from Saint Petersburg, Russia. I'm working as Research assistant and Lecturer at <a href="https://www.hse.ru/en/staff/oleg" target="_blank">HSE</a>. <a href="/pdfs/cv.pdf" target="_blank">Download CV</a>.
 								</h2>
 							</div>
 						</div>
@@ -54,23 +53,64 @@
 <section class="section main-content">
 	<div class="columns">
 		<div class="column is-three-fifths">
-			<p class="title is-5">Research papers</p>
-			<div class="content">
-			{% include "partials/papers.html" %}
+			<div class="papers content">
+				<p class="title is-5">Research papers</p>
+				{% include "partials/papers.html" %}
+			</div>
+			<div class="courses content">
+				<p class="title is-5">Courses</p>
+				{% include "partials/courses.html" %}
+			</div>
+			<div class="posts content">
+				<p class="title is-5">Blog Posts</p>
+				{% include "partials/posts.html" %}
 			</div>
 		</div>
 		<div class="column">
-			<p class="title is-5">Education</p>
-			<div class="content">
-				{% include "partials/education.html" %}
+			<div class="education content">
+				<p class="title is-5">Education</p>
+				<ul>
+					<li>2017–2020 Full-time Advanced Doctoral Programme in Social Sciences.</li>
+					<li>2015—2017 Master in Sociology Higher School of Economics.</li>
+					<li>2010—2015 Diploma in Sociology Omsk State University.</li>
+				</ul>
+			</div>
+			<div class="additional-education content">
+				<p class="title is-5">Additional Education</p>
+				<ul>
+					<div class="year-div">2017</div>
+					<li>Educational project "The Summer School", workshop "Data Analysis in Social Sciences", July 25–August 7, 2017, Dubna, Russia.</li>
+					<li>Web Science Summer School WWSSS'17, 1–8 July, 2017, Saint Petersburg, Russia. . «Best Teamwork» award.</li>
+					<div class="year-div">2016</div>
+					<li>Summer Laboratory “Digital Traces I: Meta-Morphologies of St. Petersburg”, 17–30 August 2016, Saint Petersburg, Russia.</li>
+					<li>Winter School “Archaeology of Text 5: The Evolution of Information Systems and Codes”, 31 January–6 February 2016, Sochi, Russia.</li>
+					<div class="year-div">2015</div>
+					<li>A. Casilli's workshop “Digital Methods: How to Study Online Social Interactions”, 9–10 December 2015, St. Petersburg, Russia.</li>
+				</ul>		
+			</div>
+			<div class="conferences content">
+				<p class="title is-5">Conferences</p>
+				<ul>
+					<li>European Symposium Series on Societal Challenges in Computational Social Science (London). Presentation: Ethnic Discussions in Russian-language Social Media: Representation of Ethnicities and Judgment Analysis.</li>
+					<li>Digital Transformations & Global Society 2017 (DTGS’17) (Санкт-Петербург). Presentations: 1) Detecting interethnic relations with the data from social media; 2) Digital Inequality in Russia through the Use of Social Network Site: A Cross-Regional Comparison.</li>
+					<li>International Student Research Conference, National Research University Higher School of Economics (Санкт-Петербург). Presentation: Social problems detection in online-media.</li>
+					<li>VII Международная научно-практическая конференция памяти А.О. Крыштановского «Методы и процедуры социологических исследований» (Москва). Presentation: Возможности и ограничения метода тематического моделирования в социологических исследованиях.</li>
+					<li>IV Международная научная конференция "Математическое и компьютерное моделирование" (Омск). Presentation: Исследование дискурса о биопедагогике при помощи тематического моделирования и синтаксического анализа текстов.</li>
+				</ul>		
+			</div>
+			<div class="awards content">
+				<p class="title is-5">Awards</p>
+				<ul>
+					<li>Oxford Russian Fund scholarship for MA students (2015–2016, 2016–2017).</li>
+					<li>Oxford Russian Fund scholarship for PhD students (2017–2018).</li>
+					<li>Best final thesis competition by Russian Public Opinion Research Center (1st prize in nomination "Best MA thesis”).</li>
+					<li>Winner of the International Olympiad Competitions for University Students and Graduates by HSE, programme “Complex Social Analysis”, 2015.</li>
+					<li>Increased State Academic Scholarship, OmSU, 2013–2014.</li>
+					<li>Winner of the All-Russian Olympiad of schoolchildren on Social theory at regional stage, 2010.</li>
+				</ul>
 			</div>
 		</div>
 	</div>
 </section>
-<!-- 	{% include "partials/conferences.html" %}
-	{% include "partials/schools.html" %}
-	{% include "partials/teaching.html" %}
-	{% include "partials/projects.html" %}
-	{% include "partials/awards.html" %} -->
 </div>
 {% endblock content %}

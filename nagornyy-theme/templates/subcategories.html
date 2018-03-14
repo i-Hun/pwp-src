@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} - Articles in the {{ category }} category{% endblock %}
+{% block title %}{{ SITENAME }} - Subategories{% endblock %}
 
 {% block header %}
     <!-- Page Header -->
@@ -21,17 +21,24 @@
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="post-title">Category {{ category }}</h1>
-        <span class="blog-description">Posts: {{ articles|count }}</span>
+        <h1 class="post-title">{{ SITENAME }} - Subategories</h1>
         {% if HEADER_COVER %}
             <div class="blog-cover cover" style="background-image: url('{{ HEADER_COVER }}')">            
         {% elif HEADER_COLOR %}
             <div class="post-cover cover" style="background-color: {{ HEADER_COLOR }}">
         {% else %}
             <div class="post-cover cover" style="background-image: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/post-bg.jpg')">
-        {% endif %}
+        {% endif %}        
       </div>
-    </header>
+    </header>    
 {% endblock header %}
 
-{% include "partials/loop.html" %}
+{% block content %}
+  {% for subcategory, articles in subcategories |sort %}
+    <article class="post">
+      <div class="inner">
+        <a href="{{ SITEURL }}/{{ subcategory.url }}">{{ subcategory }}</a> ({{ articles|count }})
+      </div>
+    </article>
+  {% endfor %}
+{% endblock content %}

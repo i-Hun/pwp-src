@@ -1,0 +1,11 @@
+<ul class="papers-list">
+ {% for article in articles|sort(attribute='date', reverse=True) if "Posts" == article.category %}
+ 	{% if loop.index <= 10 %}
+     <li>{{ article.date.strftime('%-d %B %Y') }}
+     	<a href="{{ SITEURL }}/{{ article.url }}">
+     		{{ article.title }}.
+     	</a>
+ 	</li>
+     {% endif %}
+ {% endfor %}
+</ul>

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import os
 
 AUTHOR = 'Oleg Nagornyy'
 SITENAME = 'Oleg Nagornyy'
@@ -34,16 +35,23 @@ DEFAULT_PAGINATION = 50
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-
-MARKUP = ('md', )
+MARKUP = ('md', 'ipynb')
 
 THEME = "nagornyy-theme"
 PLUGIN_PATHS = ["./pelican-plugins"]
-PLUGINS = ['assets']
+PLUGINS = ['assets', 
+	# 'pelican-ipynb.markup', 
+	# "photos", 
+	# "pelican-cite", 
+	# "pdf-img",
+	]
 
 ARTICLE_URL = '{category}/{slug}/'
 ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
+
 # PAGE_URL = 'pages/{slug}/'
 # PAGE_SAVE_AS = 'pages/{slug}/index.html'
 
 STATIC_PATHS = ['images', 'pdfs']
+
+TYPOGRIFY = True
