@@ -27,4 +27,6 @@
     </header>
 {% endblock header %}
 
-{% include "partials/loop.html" %}
+{% block content %}
+  {% include "partials/loop.html" %}
+{% endblock content %}

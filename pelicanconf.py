@@ -5,7 +5,7 @@ import os
 
 AUTHOR = 'Oleg Nagornyy'
 SITENAME = 'Oleg Nagornyy'
-SITEURL = 'http://nagornyy.me'
+# SITEURL = 'http://nagornyy.me'
 
 PATH = 'content'
 

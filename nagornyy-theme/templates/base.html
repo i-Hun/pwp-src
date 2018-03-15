@@ -125,21 +125,14 @@
 	{% endblock twitter_card %}
 </head>
 <!-- TODO : Body class -->
-<body class="home-template">
-
-
+<body>
+	{% include "partials/navigation.html" %}
 	{% block header %}{% endblock header %}
-
-	<section id="wrapper">
-		<a class="hidden-close"></a>
-			{% block content %}{% endblock content %}
-			<!-- TODO : Body class -->
-		<div id="body-class" style="display: none;" class="{{body_class}}"></div>
+	{% block content %}{% endblock content %}
 	
-		<footer id="footer">
+	<footer id="footer">
 
-		</footer>
-	</section>
+	</footer>
 
 	<script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/script.js"></script>
 	

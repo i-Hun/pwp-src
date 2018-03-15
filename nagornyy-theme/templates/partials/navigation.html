@@ -1,27 +1,23 @@
-<nav id="menu">
-  <a class="close-button">Close</a>
-  <div class="nav-wrapper">
-    <p class="nav-label">Menu</p>
-    <ul>
-      {% for title, link in MENUITEMS %}
-          <li><a href="{{ link }}" role="presentation">{{ title }}</a></li>
-      {% endfor %}
+<nav class="navbar is-transparent">
+	<div class="navbar-brand">
+		<div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
 
-      {% if DISPLAY_PAGES_ON_MENU %}
-          {% for p in PAGES %}
-              <li{% if p == page %} class="nav-{{p.slug}} active"{% endif %} role="presentation"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-          {% endfor %}
-      {% else %}
-          {% if DISPLAY_CATEGORIES_ON_MENU %}
-              {% for cat, null in categories %}
-                  <li{% if cat == category %} class="nav-{{cat.slug}} active"{% endif %} role="presentation"><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-              {% endfor %}
-          {% endif %}
-      {% endif %}
-
-      {% for name,link in SOCIAL if name in ['rss', 'rss-square', 'feed'] %}
-        <li class="nav-rss"><a href="{{ link }}"><i class="ic ic-rss"></i> Subscribe</a></li>
-      {% endfor %}
-    </ul>
-  </div>
+	<div id="navbarExampleTransparentExample" class="navbar-menu">
+		<div class="navbar-end">
+			<a class="navbar-item" href="/">
+				Main
+			</a>
+			<a class="navbar-item" href="/category/posts">
+				Blog
+			</a>
+			<a class="navbar-item" href="#contacts">
+				Contacts
+			</a>
+		</div>
+	</div>
 </nav>
