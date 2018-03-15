@@ -27,6 +27,14 @@
 	<meta name="generator" content="Pelican" />
 	<link href="{{ SITEURL }}" rel="canonical" />
 
+	<link rel="apple-touch-icon" sizes="180x180" href="/theme/img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/theme/img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/theme/img/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/theme/img/favicons/site.webmanifest">
+	<link rel="mask-icon" href="/theme/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
 	<!-- Feed -->
 	{% for name,link in SOCIAL if name.lower() in ['rss', 'rss-square', 'feed'] %}
 			<link href="{{ link }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
@@ -96,7 +104,7 @@
 		<meta property="og:description" content="{{ SITESUBTITLE|default('View the blog.') }}" />
 		<meta property="og:url" content="{{ SITEURL }}" />
 		<meta property="og:image" content="{{ SITEURL }}/theme/img/background-main.jpg" />
-		
+
 		{% for name,link in SOCIAL if name.lower() in ['facebook'] %}
 			<meta property="article:publisher" content="{{ link }}" />
 		{% endfor %}

@@ -54,6 +54,6 @@ ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
 # PAGE_URL = 'pages/{slug}/'
 # PAGE_SAVE_AS = 'pages/{slug}/index.html'
 
-STATIC_PATHS = ['images', 'pdfs']
+STATIC_PATHS = ['img', 'pdfs']
 
 TYPOGRIFY = True
