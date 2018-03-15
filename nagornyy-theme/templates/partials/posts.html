@@ -1,11 +1,21 @@
-<ul class="papers-list">
+<div class="papers-list">
  {% for article in articles|sort(attribute='date', reverse=True) if "Posts" == article.category %}
  	{% if loop.index <= 10 %}
-     <li>{{ article.date.strftime('%-d %B %Y') }}
+     <div>
+     	<small>{{ article.date.strftime('%-d %B %Y') }}</small>
      	<a href="{{ SITEURL }}/{{ article.url }}">
-     		{{ article.title }}.
+     		{{ article.title }}
      	</a>
- 	</li>
+     	<div>
+        {% if article.has_summary %}
+            {{ article.summary }}
+        {% elif article.summary %}
+            {{ article.summary|striptags|truncate(250) }}
+        {% endif %}
+     	</div>
+ 	</div>
+ 	<br>
      {% endif %}
  {% endfor %}
-</ul>
+</div>
+

@@ -35,7 +35,7 @@ DEFAULT_PAGINATION = 50
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-MARKUP = ('md', 'ipynb')
+MARKUP = ('md', 'rst')
 
 THEME = "nagornyy-theme"
 PLUGIN_PATHS = ["./pelican-plugins"]
