@@ -112,11 +112,13 @@
 		<main class="content" role="main">
 				<div class="columns">
 					<div class="column is-8 is-offset-2">
-<!-- 						{% if article.summary %}
+			        {% if article.has_summary %}
 						<section class="summary">
 							<strong>{{ article.summary }}</strong>
 						</section>
-						{% endif %} -->
+			        {% elif article.summary %}
+			        
+			        {% endif %}
 						<section class="article">
 							{{article.content}}
 						</section>
