@@ -5,7 +5,7 @@ import os
 
 AUTHOR = 'Oleg Nagornyy'
 SITENAME = 'Oleg Nagornyy'
-SITEURL = ''
+SITEURL = 'http://nagornyy.me'
 
 PATH = 'content'
 
@@ -19,6 +19,8 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
+HEADER_COVER = "/theme/img/background-main.jpg"
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),

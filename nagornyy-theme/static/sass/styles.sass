@@ -16,8 +16,14 @@ $body-size: 18px
 
 	.contacts
 		ul 
-			columns: 3
+			columns: 2
 
+		@media only screen and (min-width: 1215px)
+			ul
+				columns: 3
+		@media only screen and (max-width: 768px)
+			ul
+				columns: 1
 
 // .hero.is-large .hero-body
 // 	padding-top: 6rem
