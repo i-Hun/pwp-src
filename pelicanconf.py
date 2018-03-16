@@ -6,6 +6,7 @@ import os
 AUTHOR = 'Oleg Nagornyy'
 SITENAME = 'Oleg Nagornyy'
 # SITEURL = 'http://nagornyy.me'
+SITE_DESCRIPTION = "Hi! I am Oleg — Social researcher, Data analyst and Web-developer from Saint Petersburg, Russia. I'm working as Research assistant and Lecturer at HSE"
 
 
 PATH = 'content'
@@ -23,15 +24,6 @@ AUTHOR_FEED_RSS = None
 
 HEADER_COVER = "/theme/img/background-main.jpg"
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
-
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 50
 
@@ -55,7 +47,7 @@ ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
 # PAGE_URL = 'pages/{slug}/'
 # PAGE_SAVE_AS = 'pages/{slug}/index.html'
 
-STATIC_PATHS = ['img', 'pdfs']
+STATIC_PATHS = ['images', 'pdfs']
 
 TYPOGRIFY = True
 
