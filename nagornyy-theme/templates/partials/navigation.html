@@ -1,23 +1,31 @@
 <nav class="navbar is-transparent">
-	<div class="navbar-brand">
-		<div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-	</div>
+	<style>
+		.navbar-burger span:nth-child(3) {
+		    top: calc(50% + 4px);
+		}
+	</style>
+  <div class="navbar-brand">
+    <div class="navbar-item" href="https://bulma.io">
+      <p class="is-5 title">Oleg Nagornyy</p>
+    </div>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 
-	<div id="navbarExampleTransparentExample" class="navbar-menu">
-		<div class="navbar-end">
-			<a class="navbar-item" href="/">
-				Main
-			</a>
-			<a class="navbar-item" href="/category/posts">
-				Blog
-			</a>
-			<a class="navbar-item" href="#contacts">
-				Contacts
-			</a>
-		</div>
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+	<div class="navbar-end">
+		<a class="navbar-item" href="/">
+			Main
+		</a>
+		<a class="navbar-item" href="/category/posts">
+			Blog
+		</a>
+		<a class="navbar-item" href="/#contacts">
+			Contacts
+		</a>
 	</div>
+  </div>
 </nav>

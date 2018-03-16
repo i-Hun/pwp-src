@@ -7,6 +7,7 @@ AUTHOR = 'Oleg Nagornyy'
 SITENAME = 'Oleg Nagornyy'
 # SITEURL = 'http://nagornyy.me'
 
+
 PATH = 'content'
 
 TIMEZONE = 'Europe/Moscow'
