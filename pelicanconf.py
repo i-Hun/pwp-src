@@ -5,7 +5,7 @@ import os
 
 AUTHOR = 'Oleg Nagornyy'
 SITENAME = 'Oleg Nagornyy'
-# SITEURL = 'http://nagornyy.me'
+SITEURL = 'http://nagornyy.me'
 SITE_DESCRIPTION = "Hi! I am Oleg — Social researcher, Data analyst and Web-developer from Saint Petersburg, Russia. I'm working as Research assistant and Lecturer at HSE"
 
 
@@ -39,6 +39,7 @@ PLUGINS = ['assets',
 	# "photos", 
 	# "pelican-cite", 
 	# "pdf-img",
+	"summary"
 	]
 
 ARTICLE_URL = '{category}/{slug}/'
