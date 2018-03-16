@@ -58,3 +58,5 @@ ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
 STATIC_PATHS = ['img', 'pdfs']
 
 TYPOGRIFY = True
+
+SLUGIFY_SOURCE = "basename"
