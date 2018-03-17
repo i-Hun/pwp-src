@@ -20,7 +20,7 @@ $body-size: 18px
 		background-color: white
 		padding: 20px
 		margin-top: 250px
-		
+
 
 .main-content
 	box-shadow: 1px -8px 5px 0 rgba(0,0,0,0.1)
@@ -40,8 +40,21 @@ $body-size: 18px
 		li
 			margin-bottom: 0.7rem
 
-// .hero.is-large .hero-body
-// 	padding-top: 6rem
+	.posts
+		background-color: #efefef
+		padding: 30px
+
+ul.posts-list
+	columns: 2
+	column-gap: 60px
+	list-style: none
+	margin-left: 0
+	li
+		margin-bottom: 20px
+
+@media only screen and (max-width: 1215px)
+	ul.posts-list
+		columns: 1
 
 .year-div
 	font-weight: 600
