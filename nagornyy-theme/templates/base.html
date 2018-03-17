@@ -11,7 +11,7 @@
 	<meta name="yandex-verification" content="b53dc04c66d0d4e1" />
 
 	{% assets filters="sass,cssmin", output="css/style.min.css", "sass/styles.sass" %}
-		<link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+		<link rel="stylesheet" href="/{{ ASSET_URL }}">
 	{% endassets %}
 
 	<title>{% block title %}{{ SITENAME }}{% if SITESUBTITLE and SHOW_SITESUBTITLE_IN_HTML %} - {{ SITESUBTITLE }}{% endif %}{% endblock title %}</title>

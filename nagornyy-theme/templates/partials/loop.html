@@ -8,11 +8,11 @@
     {% for article in articles_page.object_list %}
         <article class="post">
             <header class="post-header">         
-                <h2 class="title is-5"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+                <h2 class="title is-5"><a href="/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
                 </h2>
                 <span class="post-meta">
                     {% for author in article.authors %}
-                        <small><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a></small>
+                        <small><a href="/{{ author.url }}">{{ author }}</a></small>
                     {% endfor %}
                      <small><time datetime="{{ article.locale_date }}">{{ article.locale_date }}</time></small>
                 </span>

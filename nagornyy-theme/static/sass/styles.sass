@@ -20,15 +20,15 @@ $body-size: 18px
 		background-color: white
 		padding: 20px
 		margin-top: 250px
+		
 
 .main-content
 	box-shadow: 1px -8px 5px 0 rgba(0,0,0,0.1)
-	li
-		margin-bottom: 0.7rem
 
 	.contacts
 		ul 
 			columns: 2
+			margin-left: 0
 			list-style: none
 
 		@media only screen and (min-width: 1215px)
@@ -37,6 +37,8 @@ $body-size: 18px
 		@media only screen and (max-width: 768px)
 			ul
 				columns: 1
+		li
+			margin-bottom: 0.7rem
 
 // .hero.is-large .hero-body
 // 	padding-top: 6rem

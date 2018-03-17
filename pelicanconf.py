@@ -25,7 +25,7 @@ AUTHOR_FEED_RSS = None
 HEADER_COVER = "/theme/img/background-main.jpg"
 
 
-DEFAULT_PAGINATION = 50
+DEFAULT_PAGINATION = 20
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
