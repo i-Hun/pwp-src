@@ -31,7 +31,7 @@
 
 {% block content %}
 
-<section class="section main-content">
+<section class="section regalia">
 	<div class="columns">
 		<div class="column is-three-fifths">
 			<div class="papers content main-block">
@@ -89,16 +89,22 @@
 			</div>
 		</div>
 	</div>
+</section>
+
+<section class="section posts">
 	<div class="columns">
 		<div class="column">
-			<div class="posts content main-block">
+			<div class="content main-block">
 				<p class="title is-5"><a href="/category/posts">Blog Posts</a></p>
 				{% include "partials/posts.html" %}
 			</div>
 		</div>
 	</div>
+</section>
+
+<section class="section contacts" id="contacts">
 	<div class="columns">
-		<div class="column contacts" id="contacts">
+		<div class="column">
 			<div class="content main-block">
 				<p class="title is-5">Contacts</p>
 				<ul>
